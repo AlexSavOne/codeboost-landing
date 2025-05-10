@@ -1,0 +1,64 @@
+/* src/styles/typography.css */
+
+.section-heading {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #80d0c7;
+  text-shadow: 0 0 12px #4ecca3;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.section-title {
+  margin-bottom: 2rem;
+  font-size: 2.6rem;
+  color: #80d0c7;
+  text-shadow: 0 0 12px #4ecca3;
+  animation: fadeInUp 0.8s ease-out;
+  text-align: center;
+}
+
+.section-subtitle {
+  margin-bottom: 2.5rem;
+  color: #cfd8dc;
+  animation: fadeInUp 1s ease-out;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.testimonial-name {
+  color: #fff;
+  font-weight: 600;
+}
+
+.testimonial-city {
+  color: #aaa;
+}
+
+.testimonial-comment {
+  color: #d0d0d0;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.testimonial-rating {
+  color: #ffe066;
+  font-size: 1.2rem;
+}
+
+.footer-text {
+  color: #aaa;
+}
+
+.footer-author {
+  font-size: 0.85rem;
+  color: #00e0ff;
+  font-weight: 500;
+}
+
+.footer-link {
+  color: #00e0ff;
+  font-size: 0.9rem;
+  text-decoration: none;
+}

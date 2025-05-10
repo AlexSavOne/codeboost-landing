@@ -1,0 +1,125 @@
+/* src/styles/cards.css */
+
+.button-glow {
+  font-weight: 600;
+  margin-top: 1rem;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.button-glow:hover {
+  transform: scale(1.05);
+}
+
+.contact-paper {
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.08);
+  background: #232336;
+  border-color: #444;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.course-card {
+  background: #232336;
+  border-color: #3b3b5c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.08);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+}
+
+.course-title {
+  color: #00e0ff;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.course-desc {
+  color: #d0d0d0;
+  margin-bottom: 0.5rem;
+}
+
+.course-duration {
+  color: #aaa;
+}
+
+.feature-card {
+  background: #232336;
+  border-color: #3b3b5c;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.08);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+  height: 100%;
+}
+
+.feature-emoji {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  color: #00e0ff;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.feature-desc {
+  color: #d0d0d0;
+}
+
+.pricing-card {
+  color: white;
+  width: 280px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
+  animation: fadeInUp 1s ease-out;
+}
+
+.pricing-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.pricing-price {
+  margin-bottom: 1.5rem;
+}
+
+.pricing-features {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.pricing-feature {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #e0e0e0;
+  text-shadow: 0 0 4px #00ffe0;
+  list-style-type: disc;
+}
+
+.testimonial-card {
+  background: #232336;
+  border-color: #3b3b5c;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 100%;
+  animation: fadeInUp 1s ease-out;
+}
+
+.footer {
+  background: linear-gradient(135deg, #1a1a2f, #111122);
+  padding: 40px 0;
+  color: #ccc;
+  border-top: 1px solid #333;
+  font-size: 0.95rem;
+}

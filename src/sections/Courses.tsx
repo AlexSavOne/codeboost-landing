@@ -28,18 +28,20 @@ const courses = [
 
 const Courses = () => {
   return (
-    <section>
-      <Container>
-        <h2 className="section-heading">Доступные курсы</h2>
+    <section className="courses">
+      <Container size="lg" className="container">
+        <Title order={2} className="section-heading">
+          <span>Доступные курсы</span>
+        </Title>
 
         <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="xl">
           {courses.map((course, index) => (
             <Paper
               key={index}
+              className="course-card"
               p="xl"
               radius="lg"
               withBorder
-              className="course-card"
             >
               <div>
                 <Title order={4} className="course-title">
@@ -52,12 +54,12 @@ const Courses = () => {
               </div>
 
               <Button
+                className="button-glow"
                 variant="gradient"
                 gradient={{ from: "#00c6ff", to: "#0072ff", deg: 45 }}
                 radius="xl"
                 fullWidth
                 mt="md"
-                className="button-glow"
               >
                 Подробнее
               </Button>

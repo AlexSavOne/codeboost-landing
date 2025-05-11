@@ -1,17 +1,26 @@
 /* src/styles/base.css */
 
+:root {
+  --primary-color: #00c6ff;
+  --secondary-color: #0072ff;
+  --text-color: #ffffff;
+  --text-secondary: #d0d0d0;
+  --section-padding: clamp(2rem, 5vw, 5rem);
+  --container-width: min(1200px, 90%);
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   background-attachment: fixed;
-  color: white;
+  color: var(--text-color);
   overflow-x: hidden;
-}
-
-section {
-  padding: 50px 0;
+  min-height: 100vh;
+  line-height: 1.6;
+  position: relative;
+  /* Для фонового изображения */
 }
 
 * {
@@ -19,6 +28,137 @@ section {
 }
 
 a {
-  color: #00c6ff;
+  color: var(--primary-color);
   text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Полный экранный фон на всю страницу */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  /* Это изображение не будет мешать контенту */
+  opacity: 0.7;
+  /* Полупрозрачное изображение */
+}
+
+/* Стили для секций */
+section {
+  padding: var(--section-padding) 0;
+}
+
+.hero,
+.courses,
+.features,
+.testimonials,
+.pricing,
+.footer {
+  position: relative;
+  z-index: 1;
+  /* Контент будет выше фона */
+}
+
+.section-heading {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.course-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.course-title {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-bottom: 1rem;
+}
+
+.course-desc {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.button-glow {
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.button-glow:hover {
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.6);
+}
+
+/* Hero section specific styles */
+.hero-title {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 20px rgba(0, 198, 255, 0.4);
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+.hero-content {
+  padding: 1rem 0;
+}
+
+.hero-image {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    margin-top: 2rem;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-button {
+    margin: 0 auto;
+  }
 }
